@@ -1,0 +1,21 @@
+from turtle import *
+
+def fraktal(tase, pikkus):
+    if tase==1:
+        for i in range(0,4):
+            forward(pikkus)
+            left(90)
+    else:
+        forward(pikkus)
+        fraktal(tase-1, pikkus*0.5)
+        left(90)
+        forward(pikkus)
+        left(90)
+        forward(pikkus)
+        left(90)
+        forward(pikkus)
+        left(90)
+        backward(pikkus*0.5)
+        fraktal(tase-1, pikkus*0.5)
+        forward(pikkus*0.5)
+fraktal (4,100)
